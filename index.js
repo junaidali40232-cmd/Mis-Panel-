@@ -4,9 +4,12 @@ const PORT = process.env.PORT || 3000;
 
 // --- IMPORT ALL PANELS ---
 const junaid = require("./api/junaid");
+const njunaid = require("./api/njunaid");
 
 // --- ROUTES ---
 app.use("/api/junaid", junaid);
+app.use("/api/njunaid", njunaid);
+
 
 // --- HEALTH CHECK ---
 app.get("/", (req,res)=> res.send("API RUNNING ✅"));
