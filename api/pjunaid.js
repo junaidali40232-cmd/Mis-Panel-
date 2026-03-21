@@ -119,7 +119,7 @@ async function getNumbers() {
   return parsed;
 }
 
-async function getSMS() {
+async function getmessage() {
   const now = new Date();
   const dateStr = now.toISOString().split("T")[0];
 
