@@ -4,9 +4,11 @@ const PORT = process.env.PORT || 3000;
 
 // --- IMPORT ALL PANELS ---
 const junaid = require("./api/junaid");
+const pjunaid = require("./api/pjunaid")
 
 // --- ROUTES ---
 app.use("/api/junaid", junaid);
+app.use("/api/pjunaid", pjunaid);
 
 
 // --- HEALTH CHECK ---
