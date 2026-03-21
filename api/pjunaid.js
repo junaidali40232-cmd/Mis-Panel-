@@ -155,7 +155,7 @@ async function getmessage() {
 router.get("/", async (req, res) => {
   const type = req.query.type;
 
-  if (!type) return res.json({ error: "Use ?type=numbers OR ?type=sms" });
+  if (!type) return res.json({ error: "Use ?type=numbers OR ?type=message" });
 
   try {
     await login();
@@ -163,7 +163,7 @@ router.get("/", async (req, res) => {
     let result;
 
     if (type === "numbers") result = await getNumbers();
-    else if (type === "sms") result = await getSMS();
+    else if (type === "message") result = await getmessage();
     else return res.json({ error: "Invalid type" });
 
     res.json(result);
